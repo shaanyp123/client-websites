@@ -1,7 +1,7 @@
 /**
- * Project portfolio data. Facts (units, contract values, scopes) trace to
- * the founder-supplied portfolio decks in intake/ — publishing client
- * names and contract values was confirmed by the founder on 2026-08-11.
+ * Project portfolio data. Facts (units, scopes) trace to the founder-supplied
+ * portfolio decks in intake/. Founder decision (2026-08-11): per-project
+ * contract values are NOT published on the site — do not add them back.
  * Featured projects get a detail page at /projects/<slug>.
  */
 export type Project = {
@@ -11,7 +11,6 @@ export type Project = {
   category: "multifamily" | "commercial";
   type: string;
   units?: string;
-  value?: string;
   photo: string; // path under /public
   photoAlt: string;
   summary: string; // card line
@@ -30,7 +29,6 @@ export const projects: Project[] = [
     category: "multifamily",
     type: "Mixed-use renovation",
     units: "630 units",
-    value: "$6.5M contract",
     photo: "/photos/1001-residences-kitchen.jpg",
     photoAlt: "Finished unit kitchen at 1001 Residences with stone backsplash",
     summary:
@@ -40,7 +38,6 @@ export const projects: Project[] = [
         "1001 S. Broad Street, Philadelphia",
         "630 multifamily units",
         "Mixed-use renovation",
-        "$6.5M contract value",
       ],
       body: [
         "One of the largest residential projects in Philadelphia's history: a 630-unit redevelopment with first-floor retail and rooftop amenity spaces.",
@@ -69,7 +66,6 @@ export const projects: Project[] = [
     category: "multifamily",
     type: "Ground-up mixed-use",
     units: "680 units",
-    value: "$6.8M contract",
     photo: "/photos/piazza-alta-kitchen.jpg",
     photoAlt: "Unit kitchen with island and marble backsplash at Piazza Alta",
     summary:
@@ -79,7 +75,6 @@ export const projects: Project[] = [
         "1099 Germantown Avenue, Philadelphia",
         "680 multifamily units",
         "Ground-up mixed-use new construction",
-        "$6.8M contract value",
       ],
       body: [
         "A ground-up, high-density development of roughly 680 units with first-floor retail and extensive rooftop amenities in Northern Liberties.",
@@ -104,7 +99,6 @@ export const projects: Project[] = [
     category: "multifamily",
     type: "Adaptive reuse",
     units: "285 units",
-    value: "$4.7M contract",
     photo: "/photos/the-poplar-rooftop.jpeg",
     photoAlt: "Rooftop amenity space at The Poplar overlooking Philadelphia",
     summary:
@@ -114,7 +108,6 @@ export const projects: Project[] = [
         "900 N. 9th Street, Philadelphia",
         "285 multifamily units",
         "Large-scale adaptive reuse",
-        "$4.7M contract value",
       ],
       body: [
         "A historic structure transformed into a mixed-use community of 285 apartments with commercial space and extensive resident amenities.",
@@ -139,7 +132,6 @@ export const projects: Project[] = [
     category: "multifamily",
     type: "Ground-up construction",
     units: "212 units",
-    value: "$2.4M contract",
     photo: "/photos/the-darien-kitchen.jpg",
     photoAlt: "Finished unit kitchen at The Darien",
     summary:
@@ -149,7 +141,6 @@ export const projects: Project[] = [
         "815 Poplar Street, Philadelphia",
         "212 multifamily units",
         "Ground-up new construction",
-        "$2.4M contract value",
       ],
       body: [
         "Ground-up construction of 212 multifamily units over first-floor retail space.",
@@ -164,7 +155,6 @@ export const projects: Project[] = [
     category: "multifamily",
     type: "Ground-up residential",
     units: "107 townhomes",
-    value: "$1.89M contract",
     photo: "/photos/650-fairmount-kitchen.jpg",
     photoAlt: "New-construction townhome kitchen at 650 Fairmount",
     summary:
@@ -174,7 +164,6 @@ export const projects: Project[] = [
         "650 Fairmount Street, Philadelphia",
         "107 townhomes",
         "Ground-up residential",
-        "$1.89M contract value",
       ],
       body: [
         "A 107-townhome new-construction development — plumbing at neighborhood scale.",
@@ -211,7 +200,6 @@ export const projects: Project[] = [
     category: "multifamily",
     type: "Ground-up construction",
     units: "45 units",
-    value: "$510k contract",
     photo: "/photos/the-parker-bathroom.jpg",
     photoAlt: "Finished unit bathroom at The Parker",
     summary: "45 units over first-floor retail in Bella Vista.",
@@ -223,7 +211,6 @@ export const projects: Project[] = [
     category: "multifamily",
     type: "Ground-up construction",
     units: "50 units",
-    value: "$675k contract",
     photo: "/photos/the-beverly-bathroom.jpg",
     photoAlt: "Unit bathroom with walk-in shower at The Beverly",
     summary: "50 units with first-floor retail in Northern Liberties.",
@@ -235,7 +222,6 @@ export const projects: Project[] = [
     category: "multifamily",
     type: "Ground-up construction",
     units: "107 units",
-    value: "$1.6M contract",
     photo: "/photos/frankford-grand-rooftop-amenity.jpg",
     photoAlt: "Rooftop amenity terrace at Frankford Grand at dusk",
     summary: "107 units with first-floor retail and rooftop amenities in Fishtown.",
@@ -246,7 +232,6 @@ export const projects: Project[] = [
     location: "125 S. 20th Street, Philadelphia, PA",
     category: "commercial",
     type: "Restaurant fit-out",
-    value: "$200k contract",
     photo: "/photos/dear-daphni-bar.jpg",
     photoAlt: "Finished bar at Dear Daphni restaurant",
     summary: "Full plumbing scope for a commercial kitchen and bar in Rittenhouse.",
@@ -257,7 +242,6 @@ export const projects: Project[] = [
     location: "680 E. Swedesford Road, Wayne, PA",
     category: "commercial",
     type: "Office fit-out",
-    value: "$199k contract",
     photo: "/photos/te-connectivity.jpg",
     photoAlt: "TE Connectivity office campus in Wayne, PA",
     summary: "102,000 sq ft office fit-out on the Main Line.",
@@ -268,7 +252,6 @@ export const projects: Project[] = [
     location: "4300 Ridge Avenue, Philadelphia, PA",
     category: "commercial",
     type: "Bank tenant fit-out",
-    value: "$200k contract",
     photo: "/photos/philadelphia-federal-credit-union.jpg",
     photoAlt: "Mixed-use building housing the Philadelphia Federal Credit Union branch",
     summary: "Branch fit-out for one of the region's largest credit unions.",
@@ -279,7 +262,6 @@ export const projects: Project[] = [
     location: "1801 N. 5th Street, Philadelphia, PA",
     category: "commercial",
     type: "Warehouse & office",
-    value: "$162k contract",
     photo: "/photos/ares-industrial-management.jpg",
     photoAlt: "Aerial view of the Ares Industrial Management warehouse",
     summary: "Warehouse with first- and second-floor office space.",

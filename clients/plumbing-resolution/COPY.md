@@ -248,6 +248,8 @@ and New Jersey. [TBD — confirm exact framing]
 
 ## Founder decisions (2026-08-11)
 1. No per-project "for <Client>" attribution — client names appear only in
+5. Per-project contract values removed from the site entirely (post-sign-off
+   founder request, 2026-08-11); the aggregate "$20M+ delivered" stat stays.
    the Home page "Trusted by" line, as the decks state them.
 2. About copy sticks strictly to what the assets say (no "ten years on"
    date math).
