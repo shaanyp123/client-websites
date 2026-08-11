@@ -20,16 +20,17 @@ export const site = {
     zip: "19123",
   },
   geo: { lat: 39.9645, lng: -75.1497 },
-  // Founder has not confirmed public hours yet. Leave empty: hours render
-  // nowhere and JSON-LD omits openingHoursSpecification until filled in.
+  // Founder decision (2026-08-11): NO hours published anywhere on the site.
+  // Keep empty — hours render nowhere and JSON-LD omits
+  // openingHoursSpecification.
   hours: [] as { days: string[]; opens: string; closes: string }[],
   schemaType: "Plumber",
   // Canonical production URL once live; the *.vercel.app URL until then.
   siteUrl: "https://cw-plumbing-resolution.vercel.app",
-  serviceArea:
-    "Philadelphia and the Greater Mid-Atlantic — Pennsylvania and New Jersey",
+  // Exact founder-approved phrase (2026-08-11).
+  serviceArea: "Philadelphia & Greater Mid-Atlantic Region",
   description:
-    "Full-scope plumbing for multifamily, mixed-use, and commercial construction across Philadelphia and the Mid-Atlantic. 2,000+ units delivered. Call (484) 232-8508 to discuss your project.",
+    "Full-scope plumbing for multifamily, mixed-use, and commercial construction across Philadelphia & the Greater Mid-Atlantic Region. 2,000+ units delivered. Call (484) 232-8508 to discuss your project.",
 } as const;
 
 export type Site = typeof site;

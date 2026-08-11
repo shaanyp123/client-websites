@@ -6,7 +6,7 @@ import { CallButton } from "@/components/CallButton";
 export const metadata: Metadata = {
   title: "Multifamily & Commercial Plumbing Services",
   description:
-    "Ground-up multifamily, mixed-use podium, adaptive reuse, and commercial fit-out plumbing across the Mid-Atlantic — one team from preconstruction through closeout.",
+    "Ground-up multifamily, mixed-use podium, adaptive reuse, and commercial fit-out plumbing across Philadelphia & the Greater Mid-Atlantic Region — one team from preconstruction through closeout.",
 };
 
 const sections = [

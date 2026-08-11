@@ -11,7 +11,9 @@
 - **Address:** 900 N 9th Street, Suite 200, Philadelphia, PA 19123
 - **Service area:** Philadelphia & Greater Mid-Atlantic region (PA & NJ per
   portfolio; TODO confirm exact framing — e.g., PA / NJ / DE)
-- **Hours:** TBD — founder will follow up
+- **Hours:** Founder decision (2026-08-11): no hours published on the site.
+- **Service area (site wording, founder-approved):** "Philadelphia & Greater
+  Mid-Atlantic Region"
 - **Existing website URL:** none
 - **Existing domain:** none — domain must be purchased (target:
   plumbingresolution.com, already used for email). Per domain policy,

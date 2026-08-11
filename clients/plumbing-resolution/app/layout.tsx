@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
 import "@fontsource-variable/inter";
@@ -57,17 +58,15 @@ export default function RootLayout({
         </a>
         <header className="sticky top-0 z-40 border-b border-brand-navy/10 bg-white/95 backdrop-blur">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-3">
-            <Link
-              href="/"
-              className="font-heading leading-tight"
-              aria-label={`${site.businessName} — home`}
-            >
-              <span className="block text-xl font-bold tracking-wide text-brand-blue">
-                PLUMB<span className="text-brand-navy">!</span>NG
-              </span>
-              <span className="block text-[0.65rem] font-semibold tracking-[0.22em] text-brand-navy">
-                RESOLUTION INC.
-              </span>
+            <Link href="/" aria-label={`${site.businessName} — home`}>
+              <Image
+                src="/logo.png"
+                alt=""
+                width={386}
+                height={130}
+                priority
+                className="h-11 w-auto"
+              />
             </Link>
             <nav aria-label="Main" className="order-last w-full md:order-none md:w-auto">
               <ul className="flex flex-wrap items-center gap-x-5 gap-y-1 md:gap-x-6">
@@ -104,7 +103,7 @@ export default function RootLayout({
               </p>
               <p className="mt-2 text-brand-sky">
                 Commercial &amp; multifamily plumbing construction —
-                Philadelphia &amp; the Mid-Atlantic.
+                Philadelphia &amp; Greater Mid-Atlantic Region.
               </p>
             </div>
             <div className="text-sm leading-relaxed">

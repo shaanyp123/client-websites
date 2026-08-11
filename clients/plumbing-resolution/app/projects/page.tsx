@@ -6,7 +6,7 @@ import { projects } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Multifamily & Commercial Plumbing Projects",
   description:
-    "Selected plumbing construction projects across Philadelphia and the Mid-Atlantic — ground-up multifamily, adaptive reuse, hospitality, and commercial fit-outs from $50k to $6.8M.",
+    "Selected plumbing construction projects across Philadelphia & the Greater Mid-Atlantic Region — ground-up multifamily, adaptive reuse, hospitality, and commercial fit-outs from $50k to $6.8M.",
 };
 
 export default function ProjectsPage() {
