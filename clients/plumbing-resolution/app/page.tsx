@@ -47,7 +47,16 @@ export default function Home() {
               closeout.
             </p>
             <div className="mt-8">
-              <CallButton label={`Discuss your project — ${site.phoneDisplay}`} />
+              <CallButton
+                label={
+                  <>
+                    Discuss your project —{" "}
+                    <span className="whitespace-nowrap">
+                      {site.phoneDisplay}
+                    </span>
+                  </>
+                }
+              />
             </div>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
