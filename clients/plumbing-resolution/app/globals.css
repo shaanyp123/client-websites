@@ -65,7 +65,15 @@ h3 {
     transform 0.6s ease-out;
 }
 
-/* WCAG: respect reduced-motion for any animation or transition. */
+/* WCAG: respect reduced-motion for any animation or transition. The
+   marquee's duplicated card set exists only for the seamless loop; without
+   motion it would just be confusing duplicate content, so hide it. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-clone {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

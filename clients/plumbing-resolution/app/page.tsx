@@ -145,12 +145,9 @@ export default function Home() {
               complicated — and delivered.
             </p>
           </Reveal>
-          <ProjectCarousel ariaLabel="Recent work — projects scroll automatically; hover, touch, or focus to pause">
+          <ProjectCarousel ariaLabel="Recent work — projects scroll continuously; hover, touch, or focus to pause">
             {featuredProjects.map((p) => (
-              <div
-                key={p.slug}
-                className="w-[85%] shrink-0 snap-start sm:w-96"
-              >
+              <div key={p.slug} className="w-80 shrink-0 sm:w-96">
                 <ProjectCard project={p} />
               </div>
             ))}
