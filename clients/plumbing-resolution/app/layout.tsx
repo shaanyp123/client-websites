@@ -60,12 +60,12 @@ export default function RootLayout({
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-3">
             <Link href="/" aria-label={`${site.businessName} — home`}>
               <Image
-                src="/logo.png"
+                src="/logo-full.png"
                 alt=""
-                width={386}
-                height={130}
+                width={387}
+                height={307}
                 priority
-                className="h-11 w-auto"
+                className="h-16 w-auto md:h-20"
               />
             </Link>
             <nav aria-label="Main" className="order-last w-full md:order-none md:w-auto">
