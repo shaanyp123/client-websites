@@ -61,7 +61,7 @@ export default function CapabilitiesPage() {
               </h2>
               <p className="mt-3 leading-relaxed">{s.body}</p>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+            <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
               <Image
                 src={s.photo}
                 alt={s.alt}

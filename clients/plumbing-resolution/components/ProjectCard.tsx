@@ -20,6 +20,11 @@ export function ProjectCard({ project }: { project: Project }) {
         {heading}
         <p className="mt-1 text-sm text-brand-sky">{project.location}</p>
         <p className="mt-2 text-sm leading-relaxed">{stats.join(" · ")}</p>
+        {project.featured && (
+          <p className="mt-3 text-sm font-semibold text-brand-sky">
+            View project <span aria-hidden="true">→</span>
+          </p>
+        )}
       </div>
     </>
   );
@@ -29,7 +34,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <Link
         href={`/projects/${project.slug}`}
         aria-label={`View project: ${project.name}`}
-        className="dark-section block rounded-lg transition-transform hover:-translate-y-1"
+        className="dark-section block rounded-lg transition-transform hover:-translate-y-1 hover:shadow-lg"
       >
         {inner}
       </Link>
