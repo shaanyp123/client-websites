@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { site } from "@/site.config";
 import { CallButton } from "@/components/CallButton";
+import { Reveal } from "@/components/Reveal";
 import { featuredProjects } from "@/lib/projects";
 
 export function generateStaticParams() {
@@ -80,9 +81,10 @@ export default async function ProjectPage({
         </div>
         {gallery && gallery.length > 0 && (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {gallery.map((g) => (
-              <div
+            {gallery.map((g, i) => (
+              <Reveal
                 key={g.src}
+                delay={i * 90}
                 className="relative aspect-[4/3] overflow-hidden rounded-lg"
               >
                 <Image
@@ -92,7 +94,7 @@ export default async function ProjectPage({
                   sizes="(min-width: 640px) 50vw, 100vw"
                   className="object-cover"
                 />
-              </div>
+              </Reveal>
             ))}
           </div>
         )}

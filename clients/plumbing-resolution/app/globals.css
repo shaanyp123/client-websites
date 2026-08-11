@@ -44,6 +44,13 @@ h3 {
   outline-color: var(--color-brand-sky);
 }
 
+/* Smooth in-page scrolling, motion-safe only. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Scroll-reveal (see components/Reveal.tsx). Applied client-side only, so
    no-JS and reduced-motion users always see content immediately. */
 .reveal-start {

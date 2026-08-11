@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CallButton } from "@/components/CallButton";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "About Plumbing Resolution Inc.",
@@ -29,7 +30,7 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <section className="mt-14">
+      <Reveal className="mt-14">
         <h2 className="font-heading text-2xl font-bold text-brand-navy">
           Jeffrey J. Devine — Founder &amp; President
         </h2>
@@ -65,7 +66,7 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       <div className="mt-14 rounded-lg bg-brand-wash p-8 text-center">
         <h2 className="font-heading text-2xl font-bold text-brand-navy">

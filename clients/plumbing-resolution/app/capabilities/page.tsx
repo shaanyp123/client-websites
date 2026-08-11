@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/site.config";
 import { CallButton } from "@/components/CallButton";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Multifamily & Commercial Plumbing Services",
@@ -51,30 +52,29 @@ export default function CapabilitiesPage() {
 
       <div className="mt-12 space-y-14">
         {sections.map((s, i) => (
-          <section
-            key={s.title}
-            className="grid items-center gap-8 lg:grid-cols-2"
-          >
-            <div className={i % 2 === 1 ? "lg:order-last" : undefined}>
-              <h2 className="font-heading text-2xl font-bold text-brand-navy">
-                {s.title}
-              </h2>
-              <p className="mt-3 leading-relaxed">{s.body}</p>
-            </div>
-            <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
-              <Image
-                src={s.photo}
-                alt={s.alt}
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </section>
+          <Reveal key={s.title}>
+            <section className="grid items-center gap-8 lg:grid-cols-2">
+              <div className={i % 2 === 1 ? "lg:order-last" : undefined}>
+                <h2 className="font-heading text-2xl font-bold text-brand-navy">
+                  {s.title}
+                </h2>
+                <p className="mt-3 leading-relaxed">{s.body}</p>
+              </div>
+              <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
+                <Image
+                  src={s.photo}
+                  alt={s.alt}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </section>
+          </Reveal>
         ))}
       </div>
 
-      <section className="mt-16 rounded-lg bg-brand-wash px-8 py-12">
+      <Reveal className="mt-16 rounded-lg bg-brand-wash px-8 py-12">
         <h2 className="text-center font-heading text-2xl font-bold text-brand-navy">
           How we work
         </h2>
@@ -99,7 +99,7 @@ export default function CapabilitiesPage() {
           Clear communication and accountability at every step — it&apos;s the
           reason builders bring us back.
         </p>
-      </section>
+      </Reveal>
 
       <div className="mt-16 text-center">
         <h2 className="font-heading text-2xl font-bold text-brand-navy">

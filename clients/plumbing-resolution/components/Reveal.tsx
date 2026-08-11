@@ -12,9 +12,12 @@ import { useEffect, useRef } from "react";
 export function Reveal({
   children,
   className = "",
+  delay = 0,
 }: {
   children: React.ReactNode;
   className?: string;
+  /** transition-delay in ms, for staggering grids of cards */
+  delay?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,7 +45,11 @@ export function Reveal({
   }, []);
 
   return (
-    <div ref={ref} className={className}>
+    <div
+      ref={ref}
+      className={className}
+      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+    >
       {children}
     </div>
   );
