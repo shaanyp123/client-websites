@@ -15,6 +15,13 @@ export function JsonLd() {
     email: site.email,
     url: site.siteUrl,
     description: site.description,
+    // Recommended LocalBusiness fields (Rich Results test flags them as
+    // non-critical when absent). Hours stay omitted per founder decision.
+    image: [
+      `${site.siteUrl}/photos/piazza-alta-rooftop-amenity.jpg`,
+      `${site.siteUrl}/photos/1001-residences-kitchen.jpg`,
+    ],
+    logo: `${site.siteUrl}/logo-full.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,
