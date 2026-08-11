@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Project } from "@/lib/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
-  const stats = [project.type, project.units, project.value].filter(Boolean);
+  const stats = [project.type, project.units].filter(Boolean);
   const heading = <h3 className="text-lg font-semibold">{project.name}</h3>;
   const inner = (
     <>

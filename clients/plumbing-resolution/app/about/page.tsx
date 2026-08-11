@@ -24,8 +24,8 @@ export default function AboutPage() {
         </p>
         <p>
           That premise has carried us from first projects to 2,000+ multifamily
-          units and more than $20M in delivered contract value, on projects
-          ranging from $50,000 fit-outs to $6.8M ground-up developments across
+          units and more than $20M in delivered contract value, on everything
+          from single-tenant fit-outs to large ground-up developments across
           Pennsylvania and New Jersey.
         </p>
       </div>
