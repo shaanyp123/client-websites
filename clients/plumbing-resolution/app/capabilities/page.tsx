@@ -74,28 +74,28 @@ export default function CapabilitiesPage() {
         ))}
       </div>
 
-      <section className="mt-16 rounded-lg bg-brand-wash p-8">
-        <h2 className="font-heading text-2xl font-bold text-brand-navy">
+      <section className="mt-16 rounded-lg bg-brand-wash px-8 py-12">
+        <h2 className="text-center font-heading text-2xl font-bold text-brand-navy">
           How we work
         </h2>
-        <ol className="mt-6 grid gap-6 sm:grid-cols-3">
+        <ol className="mx-auto mt-10 grid max-w-4xl gap-10 sm:grid-cols-3">
           {[
             "Preconstruction input on scope and budget",
             "Coordinated rough-in through phased construction",
             "Fixture set, testing, and closeout documentation",
           ].map((step, i) => (
-            <li key={step} className="flex gap-4">
+            <li key={step} className="flex flex-col items-center text-center">
               <span
                 aria-hidden="true"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-blue font-heading font-bold text-white"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-blue font-heading text-lg font-bold text-white"
               >
                 {i + 1}
               </span>
-              <p className="leading-relaxed">{step}</p>
+              <p className="mt-4 leading-relaxed">{step}</p>
             </li>
           ))}
         </ol>
-        <p className="mt-6 max-w-2xl leading-relaxed">
+        <p className="mx-auto mt-10 max-w-xl text-center leading-relaxed text-ink-soft">
           Clear communication and accountability at every step — it&apos;s the
           reason builders bring us back.
         </p>

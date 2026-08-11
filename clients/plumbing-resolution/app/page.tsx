@@ -97,7 +97,7 @@ export default function Home() {
             href="/capabilities"
             className="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
           >
-            See our full capabilities
+            See our full capabilities <span aria-hidden="true">→</span>
           </Link>
         </p>
       </section>
@@ -121,20 +121,26 @@ export default function Home() {
               href="/projects"
               className="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
             >
-              View all projects
+              View all projects <span aria-hidden="true">→</span>
             </Link>
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="font-heading text-3xl font-bold text-brand-navy">
-          Trusted by the region&apos;s builders
-        </h2>
-        <p className="mt-3 max-w-2xl text-lg text-ink-soft">
-          Post Brothers · Reed Street Builders · and general contractors and
-          developers across Pennsylvania and New Jersey.
-        </p>
+      <section className="border-y border-brand-navy/10">
+        <div className="mx-auto max-w-6xl px-4 py-14 text-center">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-ink-soft">
+            Trusted by the region&apos;s builders
+          </h2>
+          <p className="mt-6 flex flex-wrap items-baseline justify-center gap-x-12 gap-y-3 font-heading text-2xl font-semibold text-brand-navy">
+            <span>Post Brothers</span>
+            <span>Reed Street Builders</span>
+          </p>
+          <p className="mx-auto mt-5 max-w-xl text-ink-soft">
+            …and general contractors and developers across Pennsylvania and
+            New Jersey.
+          </p>
+        </div>
       </section>
 
       <section className="dark-section bg-brand-navy text-white">
