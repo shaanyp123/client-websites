@@ -25,8 +25,9 @@ export const site = {
   // openingHoursSpecification.
   hours: [] as { days: string[]; opens: string; closes: string }[],
   schemaType: "Plumber",
-  // Canonical production URL once live; the *.vercel.app URL until then.
-  siteUrl: "https://cw-plumbing-resolution.vercel.app",
+  // Final production domain (client-owned, registered at Squarespace).
+  // Set at go-live per runbooks/GO-LIVE.md after client sign-off.
+  siteUrl: "https://plumbingresolution.com",
   // Exact founder-approved phrase (2026-08-11).
   serviceArea: "Philadelphia & Greater Mid-Atlantic Region",
   description:
