@@ -3,6 +3,7 @@ import Link from "next/link";
 import { site } from "@/site.config";
 import { CallButton } from "@/components/CallButton";
 import { ProjectCard } from "@/components/ProjectCard";
+import { Reveal } from "@/components/Reveal";
 import { featuredProjects } from "@/lib/projects";
 
 const stats = [
@@ -88,44 +89,60 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="font-heading text-3xl font-bold text-brand-navy">
-          What we build
-        </h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {capabilities.map((c) => (
-            <div key={c.title} className="rounded-lg bg-brand-wash p-6">
-              <h3 className="font-heading text-lg font-semibold text-brand-navy">
-                {c.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink">{c.body}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-6">
-          <Link
-            href="/capabilities"
-            className="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
-          >
-            See our full capabilities <span aria-hidden="true">→</span>
-          </Link>
-        </p>
+        <Reveal>
+          <h2 className="font-heading text-3xl font-bold text-brand-navy">
+            What we build
+          </h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {capabilities.map((c) => (
+              <div key={c.title} className="rounded-lg bg-brand-wash p-6">
+                <h3 className="font-heading text-lg font-semibold text-brand-navy">
+                  {c.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink">
+                  {c.body}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6">
+            <Link
+              href="/capabilities"
+              className="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
+            >
+              See our full capabilities <span aria-hidden="true">→</span>
+            </Link>
+          </p>
+        </Reveal>
       </section>
 
       <section className="bg-brand-wash">
         <div className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="font-heading text-3xl font-bold text-brand-navy">
-            Recent work
-          </h2>
-          <p className="mt-3 max-w-2xl text-ink-soft">
-            Six projects, six different ways a plumbing scope gets complicated —
-            and delivered.
-          </p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal>
+            <h2 className="font-heading text-3xl font-bold text-brand-navy">
+              Recent work
+            </h2>
+            <p className="mt-3 max-w-2xl text-ink-soft">
+              Six projects, six different ways a plumbing scope gets
+              complicated — and delivered. Scroll for more.
+            </p>
+          </Reveal>
+          <div
+            role="region"
+            aria-label="Recent work — scroll horizontally for more projects"
+            tabIndex={0}
+            className="-mx-4 mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-px-4 px-4 pb-4"
+          >
             {featuredProjects.map((p) => (
-              <ProjectCard key={p.slug} project={p} />
+              <div
+                key={p.slug}
+                className="w-[85%] shrink-0 snap-start sm:w-96"
+              >
+                <ProjectCard project={p} />
+              </div>
             ))}
           </div>
-          <p className="mt-8">
+          <p className="mt-6">
             <Link
               href="/projects"
               className="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
@@ -137,7 +154,7 @@ export default function Home() {
       </section>
 
       <section className="border-y border-brand-navy/10">
-        <div className="mx-auto max-w-6xl px-4 py-14 text-center">
+        <Reveal className="mx-auto max-w-6xl px-4 py-14 text-center">
           <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-ink-soft">
             Trusted by the region&apos;s builders
           </h2>
@@ -149,11 +166,11 @@ export default function Home() {
             …and general contractors and developers across Pennsylvania and
             New Jersey.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       <section className="dark-section bg-brand-navy text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 text-center">
+        <Reveal className="mx-auto max-w-6xl px-4 py-16 text-center">
           <h2 className="font-heading text-3xl font-bold">
             Have a project going to bid?
           </h2>
@@ -163,7 +180,7 @@ export default function Home() {
           <div className="mt-8">
             <CallButton variant="onDark" />
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );
