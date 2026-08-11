@@ -20,10 +20,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = featuredProjects.find((p) => p.slug === slug);
   if (!project) return {};
+  // No per-page og image override — every shared link shows the branded
+  // logo card from the root layout, per founder preference.
   return {
     title: `${project.name} — ${project.type}`,
     description: project.summary,
-    openGraph: { images: [project.photo] },
   };
 }
 

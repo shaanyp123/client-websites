@@ -20,7 +20,17 @@ export const metadata: Metadata = {
     siteName: site.businessName,
     type: "website",
     locale: "en_US",
-    images: ["/photos/1001-residences-kitchen.jpg"],
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Plumbing Resolution Inc. — Commercial & Multifamily Plumbing Construction, Philadelphia & the Mid-Atlantic",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -59,8 +69,8 @@ export default function RootLayout({
                 RESOLUTION INC.
               </span>
             </Link>
-            <nav aria-label="Main">
-              <ul className="flex flex-wrap items-center gap-x-6 gap-y-1">
+            <nav aria-label="Main" className="order-last w-full md:order-none md:w-auto">
+              <ul className="flex flex-wrap items-center gap-x-5 gap-y-1 md:gap-x-6">
                 {nav.map((item) => (
                   <li key={item.href}>
                     <Link
@@ -73,11 +83,11 @@ export default function RootLayout({
                 ))}
               </ul>
             </nav>
-            <CallButton className="max-sm:hidden" />
+            <CallButton className="max-md:hidden" />
             <a
               href={`tel:${site.phone}`}
               aria-label={`Call ${site.businessName} at ${site.phoneDisplay}`}
-              className="rounded-md bg-brand-blue px-4 py-2 font-bold text-white sm:hidden"
+              className="rounded-md bg-brand-blue px-4 py-2 font-bold text-white md:hidden"
             >
               Call us
             </a>
