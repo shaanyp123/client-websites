@@ -3,14 +3,16 @@ import Link from "next/link";
 import { site } from "@/site.config";
 import { CallButton } from "@/components/CallButton";
 import { ProjectCard } from "@/components/ProjectCard";
+import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { Reveal } from "@/components/Reveal";
+import { StatValue } from "@/components/StatValue";
 import { featuredProjects } from "@/lib/projects";
 
 const stats = [
-  { value: "2,000+", label: "multifamily units completed" },
-  { value: "$20M+", label: "in contract value delivered" },
-  { value: "~40", label: "person team" },
-  { value: "2016", label: "founded in Philadelphia" },
+  { value: "2,000+", label: "multifamily units completed", animate: true },
+  { value: "$20M+", label: "in contract value delivered", animate: true },
+  { value: "~40", label: "person team", animate: true },
+  { value: "2016", label: "founded in Philadelphia", animate: false },
 ];
 
 const capabilities = [
@@ -60,15 +62,21 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-            <Image
-              src="/photos/piazza-alta-rooftop-amenity.jpg"
-              alt="Rooftop amenity deck with outdoor kitchen at Piazza Alta, plumbed by Plumbing Resolution"
-              fill
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
+          <div className="relative">
+            <div
+              aria-hidden="true"
+              className="absolute -bottom-4 -right-4 hidden h-full w-full rounded-lg bg-brand-sky/60 sm:block"
             />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="/photos/piazza-alta-rooftop-amenity.jpg"
+                alt="Rooftop amenity deck with outdoor kitchen at Piazza Alta, plumbed by Plumbing Resolution"
+                fill
+                priority
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -81,7 +89,7 @@ export default function Home() {
                 {s.label}
               </dt>
               <dd className="font-heading text-4xl font-bold tabular-nums">
-                {s.value}
+                <StatValue value={s.value} animate={s.animate} />
               </dd>
             </div>
           ))}
@@ -94,23 +102,33 @@ export default function Home() {
             What we build
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {capabilities.map((c) => (
-              <div key={c.title} className="rounded-lg bg-brand-wash p-6">
+            {capabilities.map((c, i) => (
+              <Reveal
+                key={c.title}
+                delay={i * 90}
+                className="rounded-lg bg-brand-wash p-6"
+              >
                 <h3 className="font-heading text-lg font-semibold text-brand-navy">
                   {c.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink">
                   {c.body}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
           <p className="mt-6">
             <Link
               href="/capabilities"
-              className="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
+              className="group inline-flex items-center gap-1 font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
             >
-              See our full capabilities <span aria-hidden="true">→</span>
+              See our full capabilities{" "}
+              <span
+                aria-hidden="true"
+                className="transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
             </Link>
           </p>
         </Reveal>
@@ -124,15 +142,10 @@ export default function Home() {
             </h2>
             <p className="mt-3 max-w-2xl text-ink-soft">
               Six projects, six different ways a plumbing scope gets
-              complicated — and delivered. Scroll for more.
+              complicated — and delivered.
             </p>
           </Reveal>
-          <div
-            role="region"
-            aria-label="Recent work — scroll horizontally for more projects"
-            tabIndex={0}
-            className="-mx-4 mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-px-4 px-4 pb-4"
-          >
+          <ProjectCarousel ariaLabel="Recent work — projects scroll automatically; hover, touch, or focus to pause">
             {featuredProjects.map((p) => (
               <div
                 key={p.slug}
@@ -141,13 +154,19 @@ export default function Home() {
                 <ProjectCard project={p} />
               </div>
             ))}
-          </div>
+          </ProjectCarousel>
           <p className="mt-6">
             <Link
               href="/projects"
-              className="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
+              className="group inline-flex items-center gap-1 font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
             >
-              View all projects <span aria-hidden="true">→</span>
+              View all projects{" "}
+              <span
+                aria-hidden="true"
+                className="transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
             </Link>
           </p>
         </div>

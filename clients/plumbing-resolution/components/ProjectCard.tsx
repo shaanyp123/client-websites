@@ -13,7 +13,7 @@ export function ProjectCard({ project }: { project: Project }) {
           alt={project.photoAlt}
           fill
           sizes="(min-width: 640px) 384px, 85vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div className="rounded-b-lg bg-brand-navy p-5 text-white">
@@ -34,7 +34,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <Link
         href={`/projects/${project.slug}`}
         aria-label={`View project: ${project.name}`}
-        className="dark-section block rounded-lg transition-transform hover:-translate-y-1 hover:shadow-lg"
+        className="dark-section group block rounded-lg transition-transform hover:-translate-y-1 hover:shadow-lg"
       >
         {inner}
       </Link>
