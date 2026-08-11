@@ -15,9 +15,16 @@
 - **Service area (site wording, founder-approved):** "Philadelphia & Greater
   Mid-Atlantic Region"
 - **Existing website URL:** none
-- **Existing domain:** none — domain must be purchased (target:
-  plumbingresolution.com, already used for email). Per domain policy,
-  register in the client's name / under an account they control.
+- **Existing domain:** plumbingresolution.com — registered at **Squarespace**
+  under the client's own account (confirmed by founder 2026-08-11). Client
+  controls the registrar; go-live is Path A (repoint DNS, old host untouched).
+  NOTE: email (info@plumbingresolution.com) runs on this domain — do NOT
+  touch MX or other mail records during the DNS cutover; change only the
+  apex A and www CNAME records.
+- **Client sign-off:** Jeff signed off on the preview (relayed by founder,
+  2026-08-11) — phase 5 gate met.
+- **Pre-cutover DNS snapshot:** TODO — capture the existing Squarespace DNS
+  records (screenshot) before changing anything; they are the rollback path.
 - **Google Business Profile URL:** TODO
 
 ## People & proof
