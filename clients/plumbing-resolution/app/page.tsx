@@ -66,7 +66,7 @@ export default function Home() {
       <section aria-label="Company statistics" className="dark-section bg-brand-navy text-white">
         <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 py-12 text-center lg:grid-cols-4">
           {stats.map((s) => (
-            <div key={s.label}>
+            <div key={s.label} className="flex flex-col">
               <dt className="order-last mt-1 text-sm text-brand-sky">
                 {s.label}
               </dt>

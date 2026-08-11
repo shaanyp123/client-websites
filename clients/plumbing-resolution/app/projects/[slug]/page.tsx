@@ -99,16 +99,16 @@ export default async function ProjectPage({
           <h2 className="font-heading text-2xl font-bold text-brand-navy">
             Planning something similar?
           </h2>
-          <p className="mt-2 text-ink-soft">
+          <div className="mt-5">
+            <CallButton />
+          </div>
+          <p className="mt-4 text-sm text-ink-soft">
             Or reach us at{" "}
             <a href={`mailto:${site.email}`} className="text-brand-blue underline underline-offset-4">
               {site.email}
             </a>
             .
           </p>
-          <div className="mt-5">
-            <CallButton />
-          </div>
         </div>
       </div>
     </article>
