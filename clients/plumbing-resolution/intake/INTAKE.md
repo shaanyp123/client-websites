@@ -11,10 +11,11 @@
 - **Address:** 900 N 9th Street, Suite 200, Philadelphia, PA 19123
 - **Service area:** Philadelphia & Greater Mid-Atlantic region (PA & NJ per
   portfolio; TODO confirm exact framing — e.g., PA / NJ / DE)
-- **Hours:** TODO
+- **Hours:** TBD — founder will follow up
 - **Existing website URL:** none
-- **Existing domain:** TODO — email uses plumbingresolution.com, so the domain
-  appears to exist; confirm who controls it / registrar
+- **Existing domain:** none — domain must be purchased (target:
+  plumbingresolution.com, already used for email). Per domain policy,
+  register in the client's name / under an account they control.
 - **Google Business Profile URL:** TODO
 
 ## People & proof
@@ -28,6 +29,10 @@
   - 2,000+ multifamily units completed; $20M+ in contract value delivered
   - Projects from $50k to $6.8M
   - Trusted by Post Brothers, Reed Street Builders, and regional developers
+  - Founder CONFIRMED (2026-08-11): client names AND contract values from the
+    portfolio decks may be published on the site.
+  - License line: use what the assets name — "Licensed Master Plumber"
+    (per executive bio). No license # required.
   - TODO: Google/Yelp reviews (likely thin — B2B), awards, association
     memberships (e.g., PHCC?), bonding/insurance statements OK to publish?
 - **Positioning notes:** Full-scope commercial/multifamily plumbing with
@@ -61,9 +66,14 @@
   contract values (adds The Parker, The Beverly, Frankford Grand, Dear
   Daphni, Ares Industrial, TE Connectivity). NOTE: founder to confirm which
   contract values may be published on the site.
-- [ ] Brand colors: from logo — blues (light drop, mid + navy wordmark);
-  hex TBD during design
-- [ ] Additional full-res project photos — founder offered; TODO drop in
+- [x] Brand colors sampled from logo: primary blue #1C6EAE, navy #15324A,
+  light drop blue #B7DFFB
+- [x] `photos/` — 26 labeled project photos (kitchens, baths, rooftop
+  amenities, exteriors) covering 1001 Residences, Piazza Alta, The Poplar,
+  The Darien, 650 Fairmount, The Parker, The Beverly, Frankford Grand,
+  Dear Daphni, Trout National, PFCU, TE Connectivity, Ares Industrial,
+  plus a blueprint background texture. Founder: "everything I have" as of
+  2026-08-11.
 
 ## Competitors
 - **Competitor sites to review:**
