@@ -3,10 +3,12 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Horizontal snap carousel that auto-advances one card at a time and loops.
- * Pauses while the viewer hovers, touches, scrolls manually, or has focus
- * inside it, and while the tab is hidden. Never auto-scrolls under
- * prefers-reduced-motion — it behaves as a plain manual scroller there.
+ * Continuously drifting project marquee. The card set is rendered twice —
+ * the clone is aria-hidden + inert (invisible to keyboard/AT) and hidden
+ * entirely under prefers-reduced-motion — so the scroll position can wrap
+ * seamlessly. Drift pauses while the viewer hovers, touches, focuses inside,
+ * or scrolls manually (brief hold), and while the tab is hidden. Under
+ * reduced motion this is a plain manual scroller of the single card set.
  */
 export function ProjectCarousel({
   children,
@@ -22,19 +24,21 @@ export function ProjectCarousel({
     if (!el) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    const SPEED = 32; // px per second
     let paused = false;
     let manualHold: ReturnType<typeof setTimeout> | null = null;
+    let raf = 0;
+    let last = performance.now();
+    let carry = 0; // sub-pixel remainder, scrollLeft is integer in some engines
 
     const setPaused = (v: boolean) => {
       paused = v;
+      last = performance.now();
     };
-    // Manual interaction pauses auto-advance for a while, then it resumes.
     const holdAfterManual = () => {
-      paused = true;
+      setPaused(true);
       if (manualHold) clearTimeout(manualHold);
-      manualHold = setTimeout(() => {
-        paused = false;
-      }, 8000);
+      manualHold = setTimeout(() => setPaused(false), 5000);
     };
 
     const onEnter = () => setPaused(true);
@@ -47,18 +51,29 @@ export function ProjectCarousel({
     el.addEventListener("wheel", holdAfterManual, { passive: true });
     el.addEventListener("pointerdown", holdAfterManual);
 
-    const interval = setInterval(() => {
-      if (paused || document.hidden) return;
-      const card = el.firstElementChild as HTMLElement | null;
-      if (!card) return;
-      const gap = 24; // matches gap-6
-      const step = card.offsetWidth + gap;
-      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - step / 2;
-      el.scrollTo({ left: atEnd ? 0 : el.scrollLeft + step, behavior: "smooth" });
-    }, 4000);
+    const tick = (now: number) => {
+      const dt = (now - last) / 1000;
+      last = now;
+      if (!paused && !document.hidden) {
+        const first = el.firstElementChild as HTMLElement | null;
+        if (first) {
+          const loopWidth = first.offsetWidth + 24; // + gap-6
+          carry += SPEED * dt;
+          const whole = Math.floor(carry);
+          if (whole >= 1) {
+            carry -= whole;
+            let next = el.scrollLeft + whole;
+            if (next >= loopWidth) next -= loopWidth;
+            el.scrollLeft = next;
+          }
+        }
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
 
     return () => {
-      clearInterval(interval);
+      cancelAnimationFrame(raf);
       if (manualHold) clearTimeout(manualHold);
       el.removeEventListener("mouseenter", onEnter);
       el.removeEventListener("mouseleave", onLeave);
@@ -76,9 +91,16 @@ export function ProjectCarousel({
       role="region"
       aria-label={ariaLabel}
       tabIndex={0}
-      className="-mx-4 mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-px-4 px-4 pb-4"
+      className="-mx-4 mt-8 flex gap-6 overflow-x-auto px-4 pb-4"
     >
-      {children}
+      <div className="flex shrink-0 gap-6">{children}</div>
+      <div
+        className="marquee-clone flex shrink-0 gap-6"
+        aria-hidden="true"
+        inert
+      >
+        {children}
+      </div>
     </div>
   );
 }
