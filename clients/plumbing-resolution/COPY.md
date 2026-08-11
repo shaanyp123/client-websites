@@ -82,7 +82,7 @@ TE Connectivity $199k, PFCU $200k, Trout National Clubhouse.)*
 
 ## Project detail pages (6 featured)
 
-### 1001 Residences — for Post Brothers *(confirm client attribution)*
+### 1001 Residences
 **Meta title:** 1001 Residences — Multifamily Plumbing, Philadelphia | Plumbing Resolution
 **H1:** 1001 Residences
 **Facts:** 1001 S. Broad Street, Philadelphia · 630 units · Mixed-use
@@ -198,10 +198,10 @@ serving Pennsylvania and New Jersey.
 **Company story:** Plumbing Resolution was founded in 2016 with a simple
 premise: complex projects don't need a bigger promise — they need a
 plumbing contractor who communicates clearly, coordinates well, and owns
-its scope. Ten years on, that premise has carried us from first projects
-to 2,000+ multifamily units and more than $20M in delivered contract
-value, on projects ranging from $50,000 fit-outs to $6.8M ground-up
-developments across Pennsylvania and New Jersey.
+its scope. That premise has carried us from first projects to 2,000+
+multifamily units and more than $20M in delivered contract value, on
+projects ranging from $50,000 fit-outs to $6.8M ground-up developments
+across Pennsylvania and New Jersey.
 
 **H2: Jeffrey J. Devine — Founder & President**
 Jeff Devine is a Licensed Master Plumber with more than two decades in the
@@ -246,14 +246,11 @@ and New Jersey. [TBD — confirm exact framing]
 
 ---
 
-## Notes for founder review
-1. **1001 Residences client attribution:** decks say "Trusted by Post
-   Brothers, Reed Street Builders" but don't tie clients to specific
-   projects. Confirm per-project "for <Client>" lines before they go on
-   detail pages (JDB-style). Same for the other five featured projects.
-2. "Ten years on" (About) assumes 2026 vs founded 2016 — cut if you'd
-   rather not date it.
-3. Hours + service-area wording still [TBD] — the only blockers left.
-4. Client project-site links (SEO): send URLs for any project with a live
-   site (e.g., 1001 Residences, Piazza Alta leasing sites) and I'll link
-   them from detail pages.
+## Founder decisions (2026-08-11)
+1. No per-project "for <Client>" attribution — client names appear only in
+   the Home page "Trusted by" line, as the decks state them.
+2. About copy sticks strictly to what the assets say (no "ten years on"
+   date math).
+3. Hours + exact service-area framing remain [TBD]; build proceeds with
+   placeholders hidden until provided.
+4. No outbound links to client project sites for now.
