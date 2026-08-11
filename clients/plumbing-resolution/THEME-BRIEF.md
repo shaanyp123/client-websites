@@ -1,5 +1,6 @@
 # Theme Brief — Plumbing Resolution Inc.
-Status: DRAFT
+Status: APPROVED (2026-08-11, founder). Note from approval: About page must
+include a bio of Jeff Devine drawn from the executive package.
 
 ## Positioning in one sentence
 Convince general contractors, developers, and owners' reps in the
