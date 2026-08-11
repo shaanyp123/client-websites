@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/*
+ * Brand palette sampled from the Plumbing Resolution logo.
+ * Text pairings are contrast-checked in the a11y pass:
+ *  - navy #15324A on white ≈ 12.4:1  (headings, body on light)
+ *  - blue #1C6EAE on white ≈ 4.9:1   (links, large text, CTAs)
+ *  - white on navy ≈ 12.4:1          (dark sections)
+ *  - white on blue #1C6EAE ≈ 4.9:1   (CTA buttons — bold text only)
+ *  - light blue tints are backgrounds only, never text.
+ */
+@theme {
+  --color-brand-blue: #1c6eae;
+  --color-brand-blue-dark: #175d93;
+  --color-brand-navy: #15324a;
+  --color-brand-navy-deep: #0e2334;
+  --color-brand-sky: #b7dffb;
+  --color-brand-wash: #eaf4fc;
+  --color-ink: #1e2937;
+  --color-ink-soft: #42566d;
+
+  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+/* Visible focus everywhere — never remove an outline without a replacement. */
+:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 2px;
+}
+
+/* On dark sections the blue outline vanishes — use the sky tint instead. */
+.dark-section :focus-visible {
+  outline-color: var(--color-brand-sky);
+}
+
+/* WCAG: respect reduced-motion for any animation or transition. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
