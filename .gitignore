@@ -1,0 +1,17 @@
+# Dependencies / builds (per-client, all nested)
+**/node_modules/
+**/.next/
+**/out/
+**/.vercel/
+
+# Env & local
+**/.env*
+!**/.env.example
+.DS_Store
+
+# Logs
+*.log
+
+# Editor
+.vscode/
+.idea/
