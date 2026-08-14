@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About Plumbing Resolution Inc.",
   description:
-    "Founded in 2016 by Licensed Master Plumber Jeffrey Devine, Plumbing Resolution is a ~40-person commercial plumbing contractor serving Pennsylvania and New Jersey.",
+    "Founded in 2016 by Licensed Master Plumber Jeffrey Devine, Plumbing Resolution is a ~60-person commercial plumbing contractor serving Pennsylvania and New Jersey.",
 };
 
 export default function AboutPage() {
@@ -23,8 +23,8 @@ export default function AboutPage() {
           owns its scope.
         </p>
         <p>
-          That premise has carried us from first projects to 2,000+ multifamily
-          units and more than $20M in delivered contract value, on everything
+          That premise has carried us from first projects to 3,000+ multifamily
+          units and more than $40M in delivered contract value, on everything
           from single-tenant fit-outs to large ground-up developments across
           Pennsylvania and New Jersey.
         </p>
@@ -49,7 +49,7 @@ export default function AboutPage() {
               Jeff Devine is a Licensed Master Plumber with more than two
               decades in the trade — he started as a teenager and never left
               the industry. He founded Plumbing Resolution in 2016 and has
-              grown it into a roughly 40-person contractor trusted by
+              grown it into a roughly 60-person contractor trusted by
               developers and general contractors across the region.
             </p>
             <p>

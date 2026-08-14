@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: "Multifamily ground-up",
-    body: "High-density residential is our core: underground and above-ground sanitary, domestic water distribution, unit kitchens and bathrooms, water-heating systems, and project-wide fixture installation. 2,000+ units delivered across Pennsylvania and New Jersey.",
+    body: "High-density residential is our core: underground and above-ground sanitary, domestic water distribution, unit kitchens and bathrooms, water-heating systems, and project-wide fixture installation. 3,000+ units delivered across Pennsylvania and New Jersey.",
     photo: "/photos/the-darien-kitchen.jpg",
     alt: "Finished unit kitchen at The Darien, a 212-unit ground-up development",
   },

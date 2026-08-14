@@ -35,7 +35,10 @@
   active in Greater Philadelphia charitable/community organizations.
 - **Years in business / founding story:** Founded 2016.
 - **Reputation notes:**
-  - 2,000+ multifamily units completed; $20M+ in contract value delivered
+  - UPDATED FIGURES (founder, 2026-08-11, supersede the deck numbers):
+    3,000+ units completed · $40M+ delivered · ~60-person team. Site uses
+    these.
+  - Original deck figures: 2,000+ multifamily units; $20M+ contract value
   - Projects from $50k to $6.8M
   - Trusted by Post Brothers, Reed Street Builders, and regional developers
   - Founder CONFIRMED (2026-08-11): client names AND contract values from the
