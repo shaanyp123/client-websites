@@ -9,9 +9,9 @@ import { StatValue } from "@/components/StatValue";
 import { featuredProjects } from "@/lib/projects";
 
 const stats = [
-  { value: "2,000+", label: "multifamily units completed", animate: true },
-  { value: "$20M+", label: "in contract value delivered", animate: true },
-  { value: "~40", label: "person team", animate: true },
+  { value: "3,000+", label: "multifamily units completed", animate: true },
+  { value: "$40M+", label: "in contract value delivered", animate: true },
+  { value: "~60+", label: "person team", animate: true },
   { value: "2016", label: "founded in Philadelphia", animate: false },
 ];
 

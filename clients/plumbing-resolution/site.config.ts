@@ -31,7 +31,7 @@ export const site = {
   // Exact founder-approved phrase (2026-08-11).
   serviceArea: "Philadelphia & Greater Mid-Atlantic Region",
   description:
-    "Full-scope plumbing for multifamily, mixed-use, and commercial construction across Philadelphia & the Greater Mid-Atlantic Region. 2,000+ units delivered. Call (484) 232-8508 to discuss your project.",
+    "Full-scope plumbing for multifamily, mixed-use, and commercial construction across Philadelphia & the Greater Mid-Atlantic Region. 3,000+ units delivered. Call (484) 232-8508 to discuss your project.",
 } as const;
 
 export type Site = typeof site;
