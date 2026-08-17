@@ -44,6 +44,16 @@ h3 {
   outline-color: var(--color-brand-sky);
 }
 
+/* Hide scrollbars on marquees — they auto-scroll and remain drag/keyboard
+   scrollable; the bar is visual noise. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Smooth in-page scrolling, motion-safe only. */
 @media (prefers-reduced-motion: no-preference) {
   html {
