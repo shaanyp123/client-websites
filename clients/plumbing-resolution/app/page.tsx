@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/site.config";
 import { CallButton } from "@/components/CallButton";
+import { Marquee } from "@/components/Marquee";
 import { ProjectCard } from "@/components/ProjectCard";
-import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { Reveal } from "@/components/Reveal";
 import { StatValue } from "@/components/StatValue";
+import { partners } from "@/lib/partners";
 import { featuredProjects } from "@/lib/projects";
 
 const stats = [
@@ -145,13 +146,13 @@ export default function Home() {
               complicated — and delivered.
             </p>
           </Reveal>
-          <ProjectCarousel ariaLabel="Recent work — projects scroll continuously; hover, touch, or focus to pause">
+          <Marquee ariaLabel="Recent work — projects scroll continuously; hover, touch, or focus to pause">
             {featuredProjects.map((p) => (
               <div key={p.slug} className="w-80 shrink-0 sm:w-96">
                 <ProjectCard project={p} />
               </div>
             ))}
-          </ProjectCarousel>
+          </Marquee>
           <p className="mt-6">
             <Link
               href="/projects"
@@ -170,19 +171,30 @@ export default function Home() {
       </section>
 
       <section className="border-y border-brand-navy/10">
-        <Reveal className="mx-auto max-w-6xl px-4 py-14 text-center">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-ink-soft">
-            Trusted by the region&apos;s builders
-          </h2>
-          <p className="mt-6 flex flex-wrap items-baseline justify-center gap-x-12 gap-y-3 font-heading text-2xl font-semibold text-brand-navy">
-            <span>Post Brothers</span>
-            <span>Reed Street Builders</span>
-          </p>
-          <p className="mx-auto mt-5 max-w-xl text-ink-soft">
-            …and general contractors and developers across Pennsylvania and
-            New Jersey.
-          </p>
-        </Reveal>
+        <div className="mx-auto max-w-6xl px-4 py-14">
+          <Reveal className="text-center">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-ink-soft">
+              Trusted by the region&apos;s builders
+            </h2>
+          </Reveal>
+          <Marquee ariaLabel="Builders and developers we work with — the list scrolls continuously; hover, touch, or focus to pause">
+            {partners.map((p) => (
+              <div
+                key={p.name}
+                className="flex h-20 shrink-0 items-center justify-center rounded-lg border border-brand-navy/10 bg-white px-10 shadow-sm"
+              >
+                {p.logo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={p.logo} alt={p.name} className="max-h-10 w-auto" />
+                ) : (
+                  <span className="whitespace-nowrap font-heading text-lg font-semibold text-brand-navy">
+                    {p.name}
+                  </span>
+                )}
+              </div>
+            ))}
+          </Marquee>
+        </div>
       </section>
 
       <section className="dark-section bg-brand-navy text-white">
