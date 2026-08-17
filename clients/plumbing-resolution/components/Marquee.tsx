@@ -3,14 +3,14 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Continuously drifting project marquee. The card set is rendered twice —
+ * Continuously drifting marquee. The card set is rendered twice —
  * the clone is aria-hidden + inert (invisible to keyboard/AT) and hidden
  * entirely under prefers-reduced-motion — so the scroll position can wrap
  * seamlessly. Drift pauses while the viewer hovers, touches, focuses inside,
  * or scrolls manually (brief hold), and while the tab is hidden. Under
  * reduced motion this is a plain manual scroller of the single card set.
  */
-export function ProjectCarousel({
+export function Marquee({
   children,
   ariaLabel,
 }: {
