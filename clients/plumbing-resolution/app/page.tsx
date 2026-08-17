@@ -39,7 +39,19 @@ export default function Home() {
   return (
     <>
       <section className="relative">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
+        {/* Experimental (founder request 2026-08-14): rooftop-deck photo as
+            the hero background, washed white for text contrast; fixed
+            attachment on desktop so content scrolls past it. Revert by
+            removing these two aria-hidden divs. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[url('/photos/piazza-alta-rooftop-amenity.jpg')] bg-cover bg-center md:bg-fixed"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-white/90 lg:bg-gradient-to-r lg:from-white lg:via-white/90 lg:to-white/70"
+        />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
           <div>
             <h1 className="font-heading text-4xl font-bold leading-tight text-brand-navy sm:text-5xl">
               Commercial plumbing, built for complex projects.
