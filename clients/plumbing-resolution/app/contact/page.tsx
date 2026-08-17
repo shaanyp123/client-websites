@@ -14,10 +14,10 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16">
-      <h1 className="font-heading text-4xl font-bold text-brand-navy">
+      <h1 className="text-center font-heading text-4xl font-bold text-brand-navy">
         Let&apos;s talk about your project
       </h1>
-      <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
+      <p className="mx-auto mt-4 text-center text-lg leading-relaxed text-ink-soft">
         The fastest way to reach us is a phone call — you&apos;ll get our team,
         not a phone tree.
       </p>
