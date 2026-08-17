@@ -49,7 +49,7 @@ export default function Home() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-white/90 lg:bg-gradient-to-r lg:from-white lg:via-white/90 lg:to-white/70"
+          className="absolute inset-0 bg-white/85 lg:bg-gradient-to-r lg:from-white/95 lg:via-white/80 lg:to-white/35"
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
           <div>
