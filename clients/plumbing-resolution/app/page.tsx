@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/site.config";
 import { CallButton } from "@/components/CallButton";
+import { HeroSlideshow } from "@/components/HeroSlideshow";
 import { Marquee } from "@/components/Marquee";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
@@ -68,16 +68,17 @@ export default function Home() {
               aria-hidden="true"
               className="absolute -bottom-4 -right-4 hidden h-full w-full rounded-lg bg-brand-sky/60 sm:block"
             />
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
-              <Image
-                src="/photos/piazza-alta-rooftop-amenity.jpg"
-                alt="Rooftop amenity deck with outdoor kitchen at Piazza Alta, plumbed by Plumbing Resolution"
-                fill
-                priority
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
+            <HeroSlideshow
+              slides={featuredProjects.map((p) => ({
+                src: p.photo,
+                alt: p.photoAlt,
+                name: p.name,
+                slug: p.slug,
+                scope: [p.units, p.type.toLowerCase().replace(" — ", " · ")]
+                  .filter(Boolean)
+                  .join(", "),
+              }))}
+            />
           </div>
         </div>
       </section>
