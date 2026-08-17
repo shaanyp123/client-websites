@@ -91,7 +91,7 @@ export function Marquee({
       role="region"
       aria-label={ariaLabel}
       tabIndex={0}
-      className="-mx-4 mt-8 flex gap-6 overflow-x-auto px-4 pb-4"
+      className="no-scrollbar -mx-4 mt-8 flex gap-6 overflow-x-auto px-4 pb-2"
     >
       <div className="flex shrink-0 gap-6">{children}</div>
       <div
