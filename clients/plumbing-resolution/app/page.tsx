@@ -38,20 +38,16 @@ const capabilities = [
 export default function Home() {
   return (
     <>
-      <section className="relative">
-        {/* Experimental (founder request 2026-08-14): rooftop-deck photo as
-            the hero background, washed white for text contrast; fixed
-            attachment on desktop so content scrolls past it. Revert by
-            removing these two aria-hidden divs. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-[url('/photos/piazza-alta-rooftop-amenity.jpg')] bg-cover bg-center md:bg-fixed"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-white/85 lg:bg-gradient-to-r lg:from-white/95 lg:via-white/80 lg:to-white/35"
-        />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
+      {/* Founder request (2026-08-14): the rooftop-deck photo runs behind the
+          whole homepage as a fixed backdrop; white sections are translucent
+          panels over it, solid bands (navy/wash) hide it for rhythm. Revert
+          by removing this div and the bg-white/75 section overlays. */}
+      <div
+        aria-hidden="true"
+        className="fixed inset-0 -z-10 bg-[url('/photos/piazza-alta-rooftop-amenity.jpg')] bg-cover bg-center"
+      />
+      <section className="relative bg-white/75">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
           <div>
             <h1 className="font-heading text-4xl font-bold leading-tight text-brand-navy sm:text-5xl">
               Commercial plumbing, built for complex projects.
@@ -110,8 +106,8 @@ export default function Home() {
         </dl>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <Reveal>
+      <section className="bg-white/75">
+        <Reveal className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="font-heading text-3xl font-bold text-brand-navy">
             What we build
           </h2>
@@ -183,7 +179,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-brand-navy/10">
+      <section className="border-y border-brand-navy/10 bg-white/75">
         <div className="mx-auto max-w-6xl px-4 py-14">
           <Reveal className="text-center">
             <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-ink-soft">
