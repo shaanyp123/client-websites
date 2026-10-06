@@ -4,29 +4,56 @@ import { site } from "@/site.config";
  * LinkedIn / Google Business Profile cards, driven by site.config.ts
  * `profiles`. Placeholders ("Profile coming soon") until a URL is set;
  * with a URL each card becomes a link. `variant="footer"` renders the
- * dark-background style for the site footer. Brand marks are inline SVGs
- * (monochrome, currentColor) so no external requests are made.
+ * dark-background style for the site footer. Brand marks are the official
+ * app-tile treatments, drawn as inline SVGs so no external requests are
+ * made: LinkedIn's white "in" on its #0A66C2 rounded square, and Google's
+ * four-color "G" on a white rounded square.
  */
 
-function LinkedInIcon({ className }: { className?: string }) {
+function LinkedInTile() {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
-    </svg>
+    <span
+      aria-hidden="true"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0A66C2]"
+    >
+      <svg viewBox="0 0 448 512" className="h-5 w-5 fill-white">
+        <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 173.9z" />
+      </svg>
+    </span>
   );
 }
 
-function GoogleIcon({ className }: { className?: string }) {
+function GoogleTile() {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
-      <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
-    </svg>
+    <span
+      aria-hidden="true"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white ring-1 ring-black/10"
+    >
+      <svg viewBox="0 0 24 24" className="h-6 w-6">
+        <path
+          fill="#4285F4"
+          d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+        />
+        <path
+          fill="#34A853"
+          d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+        />
+        <path
+          fill="#FBBC05"
+          d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+        />
+        <path
+          fill="#EA4335"
+          d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+        />
+      </svg>
+    </span>
   );
 }
 
 const entries = [
-  { name: "LinkedIn", url: site.profiles.linkedin, Icon: LinkedInIcon },
-  { name: "Google Business Profile", url: site.profiles.googleBusiness, Icon: GoogleIcon },
+  { name: "LinkedIn", url: site.profiles.linkedin, Tile: LinkedInTile },
+  { name: "Google Business Profile", url: site.profiles.googleBusiness, Tile: GoogleTile },
 ];
 
 export function ProfileCards({ variant = "light" }: { variant?: "light" | "footer" }) {
@@ -41,11 +68,10 @@ export function ProfileCards({ variant = "light" }: { variant?: "light" | "foote
   const linkLine = dark
     ? "mt-0.5 text-sm font-semibold text-brand-sky"
     : "mt-0.5 text-sm font-semibold text-brand-blue";
-  const icon = dark ? "h-7 w-7 shrink-0 text-white" : "h-7 w-7 shrink-0 text-brand-blue";
 
   return (
     <div className="space-y-4">
-      {entries.map(({ name: label, url, Icon }) =>
+      {entries.map(({ name: label, url, Tile }) =>
         url ? (
           <a
             key={label}
@@ -54,7 +80,7 @@ export function ProfileCards({ variant = "light" }: { variant?: "light" | "foote
               dark ? "hover:border-brand-sky" : "hover:border-brand-blue"
             }`}
           >
-            <Icon className={icon} />
+            <Tile />
             <span className="min-w-0">
               <span className={`block ${name}`}>{label}</span>
               <span className={`block ${linkLine}`}>
@@ -64,7 +90,7 @@ export function ProfileCards({ variant = "light" }: { variant?: "light" | "foote
           </a>
         ) : (
           <div key={label} className={`flex items-center gap-4 ${box}`}>
-            <Icon className={icon} />
+            <Tile />
             <span className="min-w-0">
               <span className={`block ${name}`}>{label}</span>
               <span className={`block ${muted}`}>Profile coming soon</span>
