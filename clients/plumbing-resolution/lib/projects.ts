@@ -32,7 +32,7 @@ export const projects: Project[] = [
     photo: "/photos/1001-residences-kitchen.jpg",
     photoAlt: "Finished unit kitchen at 1001 Residences with stone backsplash",
     summary:
-      "One of the largest residential projects in Philadelphia's history — full plumbing scope across 630 units, retail, and rooftop amenities.",
+      "One of the largest residential projects in Philadelphia's history, with a full plumbing scope across 630 units, retail, and rooftop amenities.",
     featured: {
       facts: [
         "1001 S. Broad Street, Philadelphia",
@@ -41,7 +41,7 @@ export const projects: Project[] = [
       ],
       body: [
         "One of the largest residential projects in Philadelphia's history: a 630-unit redevelopment with first-floor retail and rooftop amenity spaces.",
-        "Plumbing Resolution delivered the full plumbing scope — domestic water distribution, sanitary waste and vent, unit kitchens and bathrooms, water-heating systems, common-area and retail infrastructure, rooftop amenity plumbing, and project-wide fixture installation.",
+        "Plumbing Resolution delivered the full plumbing scope: domestic water distribution, sanitary waste and vent, unit kitchens and bathrooms, water-heating systems, common-area and retail infrastructure, rooftop amenity plumbing, and project-wide fixture installation.",
       ],
       gallery: [
         {
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     photo: "/photos/piazza-alta-kitchen.jpg",
     photoAlt: "Unit kitchen with island and marble backsplash at Piazza Alta",
     summary:
-      "Ground-up, high-density development — 680 units with first-floor retail, rooftop amenities, and full water, waste, and gas systems.",
+      "Ground-up, high-density development: 680 units with first-floor retail, rooftop amenities, and full water, waste, and gas systems.",
     featured: {
       facts: [
         "1099 Germantown Avenue, Philadelphia",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     photo: "/photos/the-poplar-rooftop.jpeg",
     photoAlt: "Rooftop amenity space at The Poplar overlooking Philadelphia",
     summary:
-      "A historic structure transformed into 285 apartments — new plumbing systems threaded through an existing frame.",
+      "A historic structure transformed into 285 apartments, with new plumbing systems threaded through an existing frame.",
     featured: {
       facts: [
         "900 N. 9th Street, Philadelphia",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
       ],
       body: [
         "A historic structure transformed into a mixed-use community of 285 apartments with commercial space and extensive resident amenities.",
-        "Adaptive reuse means building new systems inside an existing frame: we delivered residential plumbing throughout — domestic water, sanitary and vent piping, kitchens and bathrooms, common areas, and rooftop amenity plumbing — coordinated around the constraints of the original building.",
+        "Adaptive reuse means building new systems inside an existing frame: we delivered residential plumbing throughout (domestic water, sanitary and vent piping, kitchens and bathrooms, common areas, and rooftop amenity plumbing), coordinated around the constraints of the original building.",
       ],
       gallery: [
         {
@@ -135,7 +135,7 @@ export const projects: Project[] = [
     photo: "/photos/the-darien-kitchen.jpg",
     photoAlt: "Finished unit kitchen at The Darien",
     summary:
-      "Ground-up construction of 212 units over first-floor retail — underground piping through fixture set.",
+      "Ground-up construction of 212 units over first-floor retail, from underground piping through fixture set.",
     featured: {
       facts: [
         "815 Poplar Street, Philadelphia",
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     photo: "/photos/650-fairmount-kitchen.jpg",
     photoAlt: "New-construction townhome kitchen at 650 Fairmount",
     summary:
-      "107 new-construction townhomes — full plumbing repeated cleanly at neighborhood scale.",
+      "107 new-construction townhomes, with full plumbing repeated cleanly at neighborhood scale.",
     featured: {
       facts: [
         "650 Fairmount Street, Philadelphia",
@@ -166,19 +166,19 @@ export const projects: Project[] = [
         "Ground-up residential",
       ],
       body: [
-        "A 107-townhome new-construction development — plumbing at neighborhood scale.",
+        "A 107-townhome new-construction development: plumbing at neighborhood scale.",
         "Our team ran ground-up plumbing across the entire development: domestic water, sanitary and vent systems, kitchens and bathrooms, water heaters, and fixtures, repeated cleanly across a hundred-plus homes on a production schedule.",
       ],
     },
   },
   {
     slug: "trout-national-clubhouse",
-    name: "Trout National — The Clubhouse",
+    name: "Trout National Clubhouse",
     location: "Vineland, NJ",
     category: "commercial",
-    type: "Private golf club — hospitality",
+    type: "Private golf club & hospitality",
     photo: "/photos/trout-national-vineland.webp",
-    photoAlt: "Clubhouse grounds at Trout National — The Reserve in Vineland, NJ",
+    photoAlt: "Clubhouse grounds at the Trout National golf club in Vineland, NJ",
     summary:
       "Commercial plumbing for the clubhouse of a championship private golf destination in South Jersey.",
     featured: {
@@ -188,7 +188,7 @@ export const projects: Project[] = [
         "Clubhouse & hospitality construction",
       ],
       body: [
-        "The clubhouse at Trout National — The Reserve, a private golf destination in South Jersey built around hospitality, dining, and member experience.",
+        "The clubhouse at Trout National's private golf destination in South Jersey, built around hospitality, dining, and member experience.",
         "Commercial plumbing construction for the clubhouse and its hospitality spaces: domestic water, sanitary and vent piping, fixtures and equipment connections, specialty plumbing systems, and coordination with other trades throughout construction.",
       ],
     },

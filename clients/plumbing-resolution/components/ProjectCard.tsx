@@ -33,7 +33,6 @@ export function ProjectCard({ project }: { project: Project }) {
     return (
       <Link
         href={`/projects/${project.slug}`}
-        aria-label={`View project: ${project.name}`}
         className="dark-section group block rounded-lg transition-transform hover:-translate-y-1 hover:shadow-lg"
       >
         {inner}

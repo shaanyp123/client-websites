@@ -78,7 +78,7 @@ export function HeroSlideshow({ slides }: { slides: HeroSlide[] }) {
           {active.name}
           <span className="font-body font-normal text-brand-sky">
             {" "}
-            — {active.scope}
+            · {active.scope}
           </span>
         </p>
         <Link

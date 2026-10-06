@@ -21,7 +21,6 @@ export function CallButton({
   return (
     <a
       href={`tel:${site.phone}`}
-      aria-label={`Call ${site.businessName} at ${site.phoneDisplay}`}
       className={`inline-block rounded-md px-6 py-3 text-center font-bold transition-colors ${styles} ${className}`}
     >
       {label ?? `Call ${site.phoneDisplay}`}
