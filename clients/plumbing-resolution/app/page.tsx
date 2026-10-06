@@ -54,7 +54,7 @@ export default function Home() {
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
               Plumbing Resolution is a Philadelphia-based plumbing contractor
-              for multifamily, mixed-use, and commercial construction — trusted
+              for multifamily, mixed-use, and commercial construction, trusted
               by the region&apos;s builders from preconstruction through
               closeout.
             </p>
@@ -62,7 +62,7 @@ export default function Home() {
               <CallButton
                 label={
                   <>
-                    Discuss your project —{" "}
+                    Discuss your project:{" "}
                     <span className="whitespace-nowrap">
                       {site.phoneDisplay}
                     </span>
@@ -152,10 +152,10 @@ export default function Home() {
             </h2>
             <p className="mt-3 max-w-2xl text-ink-soft">
               Six projects, six different ways a plumbing scope gets
-              complicated — and delivered.
+              complicated, and delivered.
             </p>
           </Reveal>
-          <Marquee ariaLabel="Recent work — projects scroll continuously; hover, touch, or focus to pause">
+          <Marquee ariaLabel="Recent work. Projects scroll continuously; hover, touch, or focus to pause">
             {featuredProjects.map((p) => (
               <div key={p.slug} className="w-80 shrink-0 sm:w-96">
                 <ProjectCard project={p} />
@@ -186,7 +186,7 @@ export default function Home() {
               Trusted by the region&apos;s builders
             </h2>
           </Reveal>
-          <Marquee ariaLabel="Builders and developers we work with — the list scrolls continuously; hover, touch, or focus to pause">
+          <Marquee ariaLabel="Builders and developers we work with. The list scrolls continuously; hover, touch, or focus to pause">
             {partners.map((p) => (
               <div
                 key={p.name}

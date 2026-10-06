@@ -6,7 +6,7 @@ import { projects } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Multifamily & Commercial Plumbing Projects",
   description:
-    "Selected plumbing construction projects across Philadelphia & the Greater Mid-Atlantic Region — ground-up multifamily, adaptive reuse, hospitality, and commercial fit-outs.",
+    "Selected plumbing construction projects across Philadelphia & the Greater Mid-Atlantic Region: ground-up multifamily, adaptive reuse, hospitality, and commercial fit-outs.",
 };
 
 export default function ProjectsPage() {
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       </h1>
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
         From 630-unit redevelopments to single-tenant fit-outs, every project
-        below was delivered by our own team — coordinated with the GC, owner,
+        below was delivered by our own team, coordinated with the GC, owner,
         and design team from precon through closeout.
       </p>
 

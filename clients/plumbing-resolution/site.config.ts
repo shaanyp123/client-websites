@@ -13,6 +13,13 @@ export const site = {
   phone: "+14842328508", // E.164 — used in tel: links and JSON-LD
   phoneDisplay: "(484) 232-8508",
   email: "info@plumbingresolution.com", // footer NAP + contact page only — never a form
+  serviceEmail: "service@plumbingresolution.com", // shown under info@ (footer + contact)
+  // Profile links (founder, 2026-10-06): cards render on the contact page as
+  // placeholders; set a URL to make a card clickable.
+  profiles: {
+    linkedin: "", // TODO: company LinkedIn page URL
+    googleBusiness: "", // TODO: Google Business Profile share URL
+  },
   address: {
     street: "900 N 9th Street, Suite 200",
     city: "Philadelphia",

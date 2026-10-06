@@ -4,7 +4,7 @@ import { CallButton } from "@/components/CallButton";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Reach Plumbing Resolution's Philadelphia office — call ${site.phoneDisplay} to discuss multifamily and commercial plumbing scopes across PA and NJ.`,
+  description: `Reach Plumbing Resolution's Philadelphia office. Call ${site.phoneDisplay} to discuss multifamily and commercial plumbing scopes across PA and NJ.`,
 };
 
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -18,7 +18,7 @@ export default function ContactPage() {
         Let&apos;s talk about your project
       </h1>
       <p className="mx-auto mt-4 text-center text-lg leading-relaxed text-ink-soft">
-        The fastest way to reach us is a phone call — you&apos;ll get our team,
+        The fastest way to reach us is a phone call. You&apos;ll get our team,
         not a phone tree.
       </p>
 
@@ -31,40 +31,83 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <dl className="mt-12 grid gap-8 sm:grid-cols-2">
-        <div>
-          <dt className="font-heading font-semibold text-brand-navy">Office</dt>
-          <dd className="mt-1 leading-relaxed">
-            {site.address.street}
-            <br />
-            {site.address.city}, {site.address.state} {site.address.zip}
-            <br />
-            <a
-              href={mapsUrl}
-              className="text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
-            >
-              Open in Google Maps
-            </a>
-          </dd>
+      <div className="mt-12 grid gap-10 lg:grid-cols-3">
+        <dl className="grid gap-8 sm:grid-cols-2 lg:col-span-2">
+          <div>
+            <dt className="font-heading font-semibold text-brand-navy">Office</dt>
+            <dd className="mt-1 leading-relaxed">
+              {site.address.street}
+              <br />
+              {site.address.city}, {site.address.state} {site.address.zip}
+              <br />
+              <a
+                href={mapsUrl}
+                className="text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
+              >
+                Open in Google Maps
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt className="font-heading font-semibold text-brand-navy">Email</dt>
+            <dd className="mt-1 leading-relaxed">
+              <a
+                href={`mailto:${site.email}`}
+                className="text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
+              >
+                {site.email}
+              </a>
+              <br />
+              <a
+                href={`mailto:${site.serviceEmail}`}
+                className="text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
+              >
+                {site.serviceEmail}
+              </a>
+            </dd>
+          </div>
+          <div className="sm:col-span-2">
+            <dt className="font-heading font-semibold text-brand-navy">
+              Service area
+            </dt>
+            <dd className="mt-1 leading-relaxed">{site.serviceArea}.</dd>
+          </div>
+        </dl>
+
+        {/* Profile cards. Placeholders until URLs land in site.config.ts
+            (founder request, 2026-10-06). */}
+        <div className="space-y-4">
+          {[
+            { name: "LinkedIn", url: site.profiles.linkedin },
+            { name: "Google Business Profile", url: site.profiles.googleBusiness },
+          ].map((p) =>
+            p.url ? (
+              <a
+                key={p.name}
+                href={p.url}
+                className="block rounded-lg border border-brand-navy/10 bg-brand-wash p-5 transition-colors hover:border-brand-blue"
+              >
+                <p className="font-heading font-semibold text-brand-navy">
+                  {p.name}
+                </p>
+                <p className="mt-1 text-sm font-semibold text-brand-blue">
+                  View profile <span aria-hidden="true">→</span>
+                </p>
+              </a>
+            ) : (
+              <div
+                key={p.name}
+                className="rounded-lg border border-brand-navy/10 bg-brand-wash p-5"
+              >
+                <p className="font-heading font-semibold text-brand-navy">
+                  {p.name}
+                </p>
+                <p className="mt-1 text-sm text-ink-soft">Profile coming soon</p>
+              </div>
+            )
+          )}
         </div>
-        <div>
-          <dt className="font-heading font-semibold text-brand-navy">Email</dt>
-          <dd className="mt-1">
-            <a
-              href={`mailto:${site.email}`}
-              className="text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"
-            >
-              {site.email}
-            </a>
-          </dd>
-        </div>
-        <div className="sm:col-span-2">
-          <dt className="font-heading font-semibold text-brand-navy">
-            Service area
-          </dt>
-          <dd className="mt-1 leading-relaxed">{site.serviceArea}.</dd>
-        </div>
-      </dl>
+      </div>
     </div>
   );
 }

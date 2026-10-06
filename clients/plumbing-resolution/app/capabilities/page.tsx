@@ -7,7 +7,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Multifamily & Commercial Plumbing Services",
   description:
-    "Ground-up multifamily, mixed-use podium, adaptive reuse, and commercial fit-out plumbing across Philadelphia & the Greater Mid-Atlantic Region — one team from preconstruction through closeout.",
+    "Ground-up multifamily, mixed-use podium, adaptive reuse, and commercial fit-out plumbing across Philadelphia & the Greater Mid-Atlantic Region, with one team from preconstruction through closeout.",
 };
 
 const sections = [
@@ -19,7 +19,7 @@ const sections = [
   },
   {
     title: "Mixed-use, podium & retail",
-    body: "Residential towers over retail demand coordination between very different systems. We deliver both — plus the rooftop amenity, gas, and common-area plumbing that ties a building together.",
+    body: "Residential towers over retail demand coordination between very different systems. We deliver both, plus the rooftop amenity, gas, and common-area plumbing that ties a building together.",
     photo: "/photos/piazza-alta-gas-amenity.jpg",
     alt: "Gas-served rooftop amenity space at Piazza Alta",
   },
@@ -31,7 +31,7 @@ const sections = [
   },
   {
     title: "Commercial fit-outs",
-    body: "Restaurant kitchens and bars, bank branches, and office fit-outs — including a 102,000 sq ft office scope — delivered fast, clean, and to spec.",
+    body: "Restaurant kitchens and bars, bank branches, and office fit-outs, including a 102,000 sq ft office scope, delivered fast, clean, and to spec.",
     photo: "/photos/dear-daphni-bar.jpg",
     alt: "Finished commercial bar at Dear Daphni restaurant",
   },
@@ -46,7 +46,7 @@ export default function CapabilitiesPage() {
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
         Full-scope plumbing construction, one accountable team. We work with
         general contractors, owners, and design teams to keep the plumbing
-        scope aligned and moving — through phased construction and accelerated
+        scope aligned and moving through phased construction and accelerated
         schedules.
       </p>
 
@@ -96,7 +96,7 @@ export default function CapabilitiesPage() {
           ))}
         </ol>
         <p className="mx-auto mt-10 max-w-xl text-center leading-relaxed text-ink-soft">
-          Clear communication and accountability at every step — it&apos;s the
+          Clear communication and accountability at every step. It&apos;s the
           reason builders bring us back.
         </p>
       </Reveal>

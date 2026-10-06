@@ -24,7 +24,7 @@ export async function generateMetadata({
   // No per-page og image override — every shared link shows the branded
   // logo card from the root layout, per founder preference.
   return {
-    title: `${project.name} — ${project.type}`,
+    title: `${project.name} | ${project.type}`,
     description: project.summary,
   };
 }

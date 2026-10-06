@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Plumbing Resolution Inc. — Commercial & Multifamily Plumbing Construction, Philadelphia & the Mid-Atlantic",
+        alt: "Plumbing Resolution Inc.: Commercial & Multifamily Plumbing Construction, Philadelphia & the Mid-Atlantic",
       },
     ],
   },
@@ -58,7 +58,7 @@ export default function RootLayout({
         </a>
         <header className="sticky top-0 z-40 border-b border-brand-navy/10 bg-white/95 backdrop-blur">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-3">
-            <Link href="/" aria-label={`${site.businessName} — home`}>
+            <Link href="/" aria-label={`${site.businessName} home`}>
               <Image
                 src="/logo-full.png"
                 alt=""
@@ -85,7 +85,7 @@ export default function RootLayout({
             <CallButton className="max-md:hidden" />
             <a
               href={`tel:${site.phone}`}
-              aria-label={`Call ${site.businessName} at ${site.phoneDisplay}`}
+              aria-label={`Call us at ${site.phoneDisplay}`}
               className="rounded-md bg-brand-blue px-4 py-2 font-bold text-white md:hidden"
             >
               Call us
@@ -102,7 +102,7 @@ export default function RootLayout({
                 {site.businessName}
               </p>
               <p className="mt-2 text-brand-sky">
-                Commercial &amp; multifamily plumbing construction —
+                Commercial &amp; multifamily plumbing construction, serving
                 Philadelphia &amp; Greater Mid-Atlantic Region.
               </p>
             </div>
@@ -126,6 +126,14 @@ export default function RootLayout({
                   className="underline decoration-brand-sky underline-offset-4 hover:text-brand-sky"
                 >
                   {site.email}
+                </a>
+              </p>
+              <p className="mt-1">
+                <a
+                  href={`mailto:${site.serviceEmail}`}
+                  className="underline decoration-brand-sky underline-offset-4 hover:text-brand-sky"
+                >
+                  {site.serviceEmail}
                 </a>
               </p>
             </div>
