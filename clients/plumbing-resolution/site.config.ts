@@ -10,8 +10,8 @@
 export const site = {
   brand: "vocarra",
   businessName: "Plumbing Resolution Inc.",
-  phone: "+14842328508", // E.164 — used in tel: links and JSON-LD
-  phoneDisplay: "(484) 232-8508",
+  phone: "+12679301182", // E.164 — used in tel: links and JSON-LD
+  phoneDisplay: "(267) 930-1182",
   email: "info@plumbingresolution.com", // footer NAP + contact page only — never a form
   serviceEmail: "service@plumbingresolution.com", // shown under info@ (footer + contact)
   // Profile links (founder, 2026-10-06): cards render on the contact page as
@@ -38,7 +38,7 @@ export const site = {
   // Exact founder-approved phrase (2026-08-11).
   serviceArea: "Philadelphia & Greater Mid-Atlantic Region",
   description:
-    "Full-scope plumbing for multifamily, mixed-use, and commercial construction across Philadelphia & the Greater Mid-Atlantic Region. 3,000+ units delivered. Call (484) 232-8508 to discuss your project.",
+    "Full-scope plumbing for multifamily, mixed-use, and commercial construction across Philadelphia & the Greater Mid-Atlantic Region. 3,000+ units delivered. Call (267) 930-1182 to discuss your project.",
 } as const;
 
 export type Site = typeof site;
