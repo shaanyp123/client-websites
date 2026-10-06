@@ -6,7 +6,7 @@
   ground-up, mixed-use, adaptive reuse, hospitality, commercial fit-outs).
   NOT a residential service/repair plumber.
 - **Business name (exact, as it should appear on the site):** Plumbing Resolution Inc.
-- **Phone number:** +1 484-232-8508 (Google Voice; display: (484) 232-8508)
+- **Phone number:** +1 267-930-1182 (founder-provided update 2026-10-06; display: (267) 930-1182). Previous: 484-232-8508 (Google Voice).
 - **Email:** info@plumbingresolution.com
 - **Address:** 900 N 9th Street, Suite 200, Philadelphia, PA 19123
 - **Service area:** Philadelphia & Greater Mid-Atlantic region (PA & NJ per
