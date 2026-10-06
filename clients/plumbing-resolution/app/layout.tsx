@@ -8,6 +8,7 @@ import "@fontsource/poppins/700.css";
 import { site } from "@/site.config";
 import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
+import { ProfileCards } from "@/components/ProfileCards";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -94,7 +95,7 @@ export default function RootLayout({
         </header>
         <main id="main">{children}</main>
         <footer className="dark-section bg-brand-navy-deep text-white">
-          <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 lg:grid-cols-3">
             {/* NAP (name, address, phone) rendered from config — consistent
                 everywhere for local SEO, and one edit updates it all. */}
             <div>
@@ -137,6 +138,7 @@ export default function RootLayout({
                 </a>
               </p>
             </div>
+            <ProfileCards variant="footer" />
           </div>
         </footer>
         <JsonLd />

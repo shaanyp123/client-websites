@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/site.config";
 import { CallButton } from "@/components/CallButton";
+import { ProfileCards } from "@/components/ProfileCards";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -76,37 +77,7 @@ export default function ContactPage() {
 
         {/* Profile cards. Placeholders until URLs land in site.config.ts
             (founder request, 2026-10-06). */}
-        <div className="space-y-4">
-          {[
-            { name: "LinkedIn", url: site.profiles.linkedin },
-            { name: "Google Business Profile", url: site.profiles.googleBusiness },
-          ].map((p) =>
-            p.url ? (
-              <a
-                key={p.name}
-                href={p.url}
-                className="block rounded-lg border border-brand-navy/10 bg-brand-wash p-5 transition-colors hover:border-brand-blue"
-              >
-                <p className="font-heading font-semibold text-brand-navy">
-                  {p.name}
-                </p>
-                <p className="mt-1 text-sm font-semibold text-brand-blue">
-                  View profile <span aria-hidden="true">→</span>
-                </p>
-              </a>
-            ) : (
-              <div
-                key={p.name}
-                className="rounded-lg border border-brand-navy/10 bg-brand-wash p-5"
-              >
-                <p className="font-heading font-semibold text-brand-navy">
-                  {p.name}
-                </p>
-                <p className="mt-1 text-sm text-ink-soft">Profile coming soon</p>
-              </div>
-            )
-          )}
-        </div>
+        <ProfileCards />
       </div>
     </div>
   );
