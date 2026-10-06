@@ -17,8 +17,8 @@ export const site = {
   // Profile links (founder, 2026-10-06): cards render on the contact page as
   // placeholders; set a URL to make a card clickable.
   profiles: {
-    linkedin: "", // TODO: company LinkedIn page URL
-    googleBusiness: "", // TODO: Google Business Profile share URL
+    linkedin: "https://www.linkedin.com/company/plumbing-resolution-inc",
+    googleBusiness: "", // TODO: Google Business Profile share URL (in progress)
   },
   address: {
     street: "900 N 9th Street, Suite 200",
